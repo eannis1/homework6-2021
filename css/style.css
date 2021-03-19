@@ -14,27 +14,47 @@ header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*Requirement 3*/
 .nav_links{
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*Requirement 4*/
 .price{
     min-height: 500px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 /*Requirement 5*/
@@ -43,7 +63,8 @@ header{
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
-  flex-basis: 400px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
 }
 
 /*Requirement 6*/
@@ -58,8 +79,11 @@ header{
 .gallery{
   min-height: 600px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*Requirement 8*/
@@ -71,40 +95,57 @@ header{
 
 /*Requirement 9*/
 #logo{
-   /*Your code here.*/
- 
+   width: 25px;
+   opacity: 0;
+   -webkit-animation-name: logo_grow;
+           animation-name: logo_grow;
+   -webkit-animation-duration: 15s;
+           animation-duration: 15s;
+   -webkit-animation-fill-mode: forwards;
+           animation-fill-mode: forwards;
 }
 
 /*Keyframes for animation*/
 @-webkit-keyframes logo_grow{
-  /*Your code here.*/
-
+  from {width: 25px; opacity: 0;} 
+  to {width: 420px; opacity: 1;}
 }
 
-@keyframes logo_grow{
-  /*Your code here.*/
-
+@keyframes logo_grow {
+  from {width: 25px; opacity: 0;} 
+  to {width: 420px; opacity: 1;}
 } 
 
 @media screen and (min-width: 850px){
   /*Requirement 10*/
   body header{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   /*Requirement 10*/
   .nav_links{
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   
   /* WHY IS L CARD A DIFF SIZE????*/
   /*Requirement 11*/
   .package {
-    flex-basis: 230px;
+    -ms-flex-preferred-size: 230px;
+        flex-basis: 230px;
   } 
 }
 
@@ -116,6 +157,7 @@ header{
     }
   .skip a{
     -webkit-transition: none; 
+    -o-transition: none; 
     transition: none;
     }
   }
@@ -125,37 +167,42 @@ header{
   body {
     background-image: none;
   }
+
   /*Requirement 14*/
-  .nav {
+  nav {
     width: 100%;
   }
 
-  /* Why doesn't this work? */
   /*Requirement 15*/
   .nav_links {
-    flex-direction: row;
-    justify-content:space-around;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
+
   /*Requirement 16*/
   .price {
-    align-items:flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
+  
   /*Requirement 17*/
   .package {
     border: 2px solid #45ADAD;
-    flex-basis: 200px;
-  }
-  .package header {
-    background: #288080;
-    border: 2px solid #45ADAD;
-    padding: 20px 0;
-    border-radius: 7px 7px 0 0;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
   }
 
   /*Requirement 18*/
   #gallery, .gallery {
     display: none;
   }
- 
 }
 
